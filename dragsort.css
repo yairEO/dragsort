@@ -1,0 +1,22 @@
+.dragsort--dragStart > [draggable] {
+    transition: .18s cubic-bezier(.6, .1, .4, 1.2);
+}
+
+.dragsort--dragStart > [draggable] > * {
+    pointer-events: none;
+}
+
+.dragsort--dragElem {
+    opacity: 0;
+}
+
+.dragsort--hide {
+    width: 0 !important;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+
+.dragsort--noAnim {
+    transition: 0s !important;
+}

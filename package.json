@@ -1,0 +1,22 @@
+{
+    "name": "@yaireo/dragsort",
+    "version": "1.0.0",
+    "homepage": "https://github.com/yairEO/dragsort",
+    "description": "Animated drag sorting for horizontal list items ",
+    "_npmUser": {
+        "name": "vsync",
+        "email": "vsync.design@gmail.com"
+    },
+    "author": {
+        "name": "Yair Even-Or",
+        "email": "vsync.design@gmail.com"
+    },
+    "main": "./dragsort.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yairEO/dragsort.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yaireo/dragsort/issues"
+    }
+}
