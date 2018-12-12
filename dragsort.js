@@ -1,3 +1,23 @@
+/*
+    dragSort
+    (c) Yair Even Or
+    https://github.com/yairEO/dragsort
+*/
+
+;(function (root, factory) {
+    var define = define || {};
+    if (typeof define === 'function' && define.amd)
+        define([], factory);
+    else if (typeof exports === 'object' && typeof module === 'object')
+        module.exports = factory();
+    else if (typeof exports === 'object')
+        exports["DragSort"] = factory();
+    else
+        root.FormValidator = factory();
+}(this, function(){
+    return DragSort;
+})();
+
 function DragSort(parentElm) {
     if (!parentElm) return this;
 
