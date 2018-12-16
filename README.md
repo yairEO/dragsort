@@ -3,8 +3,10 @@
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/yairEO/dragsort/master/demo.gif" />
+    [![Watch the video](https://raw.githubusercontent.com/yairEO/dragsort/master/demo.gif)](https://codepen.io/vsync/pen/3f6b998fa1bb1b7c7f74ec89152f39f9/?editors=0100)
 </p>
+
+
 
 
 
