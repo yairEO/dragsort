@@ -2,11 +2,11 @@
 ========
 
 
-<p align="center" style="text-align:center">
+<a align="center" href="https://codepen.io/vsync/pen/3f6b998fa1bb1b7c7f74ec89152f39f9/?editors=0100">
     
-[![Watch the video](https://raw.githubusercontent.com/yairEO/dragsort/master/demo.gif)](https://codepen.io/vsync/pen/3f6b998fa1bb1b7c7f74ec89152f39f9/?editors=0100)
+![Watch the video](https://raw.githubusercontent.com/yairEO/dragsort/master/demo.gif)
 
-</p>
+</a>
 
 
 
