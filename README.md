@@ -54,4 +54,5 @@ Useful *classes* are set on elements being dragged.
 Name                    | Type                         | Default                                    | Info
 ----------------------- | ---------------------------- | ------------------------------------------ | --------------------
 selector                | `String`                     | all child nodes of first parameter         | which elements should be draggable
+mode                    | `String`                     |                                            | Use `"vertical"` for vertical-lists re-ordering
 callbacks.dragEnd       | `Function`                   |                                            | callback function when finished dragging. The dropped element is the only argument
