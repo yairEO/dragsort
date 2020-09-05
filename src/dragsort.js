@@ -41,6 +41,7 @@ var DragSort = (function (elm) {
         Object.assign(this.settings, settings)
 
         this.setup()
+        observeDOM(this.parentElm, this.setup.bind(this))
         this.bindEvents()
     }
 
@@ -60,8 +61,6 @@ var DragSort = (function (elm) {
             })
 
             this.gap = this.getItemsGap(this.parentElm.firstElementChild)
-
-            observeDOM(this.parentElm, this.setup.bind(this))
         },
 
         throttle(cb, limit) {
