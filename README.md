@@ -45,4 +45,4 @@ var dragSort = new DragSort(listElm)
 ## Pre-setup suggestions:
 
 * Setting `box-sizing: border-box` on your list's children is a good idea
-* Should include the `dragsort.css` file (from this repository)
+* Use the stylesheet `dist/dragsort.css`

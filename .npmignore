@@ -47,16 +47,13 @@ Temporary Items
 .apdisk
 /node_modules
 /test
+/src
 /.npmrc
 /.babelrc
 /.github
 /package-lock.json
-/docs
-/react-demo.html
 .idea
 /.vscode
-/111.html
-/logo.psd
 /*.svg
 /*.gif
 /jest-puppeteer.config.js
