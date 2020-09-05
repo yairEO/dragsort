@@ -2,7 +2,8 @@
     "name": "@yaireo/dragsort",
     "version": "1.0.0",
     "homepage": "https://github.com/yairEO/dragsort",
-    "description": "Animated drag sorting for horizontal list items ",
+    "description": "Simple lisghtweight HTML5 drag-&-drop sorting ",
+    "license": "MIT",
     "_npmUser": {
         "name": "vsync",
         "email": "vsync.design@gmail.com"

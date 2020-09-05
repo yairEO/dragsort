@@ -1,22 +1,24 @@
-.dragsort--dragStart > [draggable] {
-    transition: .18s cubic-bezier(.6, .1, .4, 1.2);
+.dragsort--noAnim,
+.dragsort--noAnim ~ [draggable]{
+    transition: 0s !important;
 }
 
-.dragsort--dragStart > [draggable] > * {
-    pointer-events: none;
-}
-
-.dragsort--dragElem {
+.dragsort--dragStart .dragsort--dragElem {
     opacity: 0;
 }
 
-.dragsort--hide {
+.dragsort--dragStart .dragsort--hide {
     width: 0 !important;
+    height: 0 !important;
     padding: 0;
     margin: 0;
     border-width: 0;
 }
 
-.dragsort--noAnim {
-    transition: 0s !important;
+.dragsort--dragStart > *{
+    transition: .18s cubic-bezier(.6, .1, .4, 1.2);
+}
+
+.dragsort--dragStart > * > *{
+    pointer-events: none;
 }
