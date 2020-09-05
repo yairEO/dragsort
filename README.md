@@ -20,8 +20,13 @@
 
 ## Installation
 ```sh
-    npm i @yaireo/dragsort --save
+npm i @yaireo/dragsort --save
 ```
+
+## Pre-setup suggestions:
+
+* Set `box-sizing: border-box` on the list or its children is a good idea
+* Use the provided stylesheet in this package - `dist/dragsort.css`
 
 ## Usage
 
@@ -42,7 +47,11 @@ var listElm = document.querySelector('.list')
 var dragSort = new DragSort(listElm)
 ```
 
-## Pre-setup suggestions:
+Useful *classes* are set on elements being dragged.
 
-* Setting `box-sizing: border-box` on your list's children is a good idea
-* Use the stylesheet `dist/dragsort.css`
+## Settings
+
+Name                    | Type                         | Default                                    | Info
+----------------------- | ---------------------------- | ------------------------------------------ | --------------------
+selector                | `String`                     | all child nodes of first parameter         | which elements should be draggable
+callbacks.dragEnd       | `Function`                   |                                            | callback function when finished dragging. The dropped element is the only argument

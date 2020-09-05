@@ -106,7 +106,7 @@ var DragSort = (function (elm) {
         afterDragStart() {
             this.parentElm.classList.add(`${this.namespace}--dragStart`)
 
-            // 'יקמ' hiding the source element with transition, the initial "width" is set to occupy the same space
+            // hiding the source element with transition, the initial "width" is set to occupy the same space
             this.source.elm.style.width = this.source.elm.clientWidth + 'px'
 
             this.source.elm.classList.add(`${this.namespace}--dragElem`)
