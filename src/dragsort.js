@@ -82,20 +82,26 @@ var DragSort = (function (elm) {
         },
 
         dragstart(e, elm) {
-            _current = this;
-            var draggableElm = this.getDraggableElm(elm);
+            _current = this
+
+            var draggableElm = this.getDraggableElm(elm),
+                clientRect;
+
             if (!draggableElm) {
-                _current = {};
+                _current = {}
                 return
             }
 
             this.source = this.getInitialState()
             this.target = this.getInitialState()
 
+            clientRect = draggableElm.getBoundingClientRect() // more accurate than offsetWidth/offsetHeight (not rounded)
+
             this.source.elm = draggableElm
             this.source.idx = this.getNodeIndex(draggableElm)
-            this.source.size.width = draggableElm.offsetWidth //elm.getBoundingClientRect();
-            this.source.size.height = draggableElm.offsetHeight
+            this.source.size.width = clientRect.width
+            this.source.size.height = clientRect.height
+
             // https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/effectAllowed
             e.dataTransfer.effectAllowed = 'move'
 
@@ -104,10 +110,12 @@ var DragSort = (function (elm) {
         },
 
         afterDragStart() {
+            var prop = this.settings.mode == 'vertical' ? 'height' : 'width'
+
             this.parentElm.classList.add(`${this.namespace}--dragStart`)
 
             // hiding the source element with transition, the initial "width" is set to occupy the same space
-            this.source.elm.style.width = this.source.elm.clientWidth + 'px'
+            this.source.elm.style[prop] = this.source.size[prop] + 'px'
 
             this.source.elm.classList.add(`${this.namespace}--dragElem`)
         },
