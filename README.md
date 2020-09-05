@@ -38,8 +38,8 @@
 
 #### javascript
 ```js
-    var listElm = document.querySelector('.list'),
-        dragSort = new DragSort(listElm);
+var listElm = document.querySelector('.list')
+var dragSort = new DragSort(listElm)
 ```
 
 ## Pre-setup suggestions:
