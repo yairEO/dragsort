@@ -22,6 +22,12 @@
         "name": "Yair Even-Or",
         "email": "vsync.design@gmail.com"
     },
+    "files": [
+        "dist/dragsort.css",
+        "dist/dragsort.js",
+        "src/dragsort.css",
+        "src/dragsort.js"
+    ],
     "main": "./dist/dragsort.js",
     "repository": {
         "type": "git",

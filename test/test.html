@@ -1,0 +1,104 @@
+<section>
+  <h2>Horizontal Tags - Varying Widths</h2>
+  <ul class="list tags">
+    <li class="card"><div style='width:40px'>A</div></li>
+    <li class="card"><div style='width:130px'>B</div></li>
+    <li class="card"><div style='width:20px'>C</div></li>
+    <li class="card"><div style='width:100px'>D</div></li>
+    <li class="card"><div style='width:200px'>E</div></li>
+    <li class="card"><div style='width:60px'>F</div></li>
+  </ul>
+</section>
+
+<script src='../src/dragsort.js'></script>
+<link rel="stylesheet" href="../src/dragsort.css">
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  font: 16px Arial;
+}
+
+section {
+  flex: 1;
+  padding: 1vh 2vw;
+}
+section h2 {
+  text-align: center;
+}
+section:not(:first-child) {
+  border-left: 1px solid #CCC;
+}
+section:nth-child(even) {
+  background: #FAFAFF;
+}
+
+.list.people {
+  text-align: center;
+}
+.list.people img {
+  display: block;
+  vertical-align: top;
+  border-radius: 50px;
+  pointer-events: none;
+}
+.list.people > * {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 0.2em;
+  position: relative;
+}
+
+.list {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0;
+  list-style-type: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+}
+
+.list.tags {
+  border: 2px solid rgba(241, 109, 96, 0.2);
+  border-radius: 20px;
+}
+
+.list.vertical {
+  width: 300px;
+  border: 2px solid #606DF1;
+  border-radius: 20px;
+}
+.list.vertical .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #606DF1;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  cursor: move;
+  background-color: #F16D60;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 0.3em 0.5em;
+  margin: 5px 0 5px 5px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+</style>
+<script>
+  DragSort( document.querySelector('.list') )
+</script>
