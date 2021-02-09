@@ -76,6 +76,8 @@ var DragSort = (function (elm) {
         },
 
         getDraggableElm(elm) {
+            if( !elm.closest ) return null
+
             var draggableElm = elm.closest('[draggable="true"]')
             // only allow dragging/dropping inside the same parent element
             return (this.uid == _current.uid) ? draggableElm : null
