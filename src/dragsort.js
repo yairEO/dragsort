@@ -76,9 +76,13 @@ var DragSort = (function (elm) {
         },
 
         getDraggableElm(elm) {
-            var draggableElm = elm.closest('[draggable="true"]')
-            // only allow dragging/dropping inside the same parent element
-            return (this.uid == _current.uid) ? draggableElm : null
+            if(elm.closest) { // `closest` might not be defined on all elements
+                var draggableElm = elm.closest('[draggable="true"]')
+                // only allow dragging/dropping inside the same parent element
+                return (this.uid == _current.uid) ? draggableElm : null
+            } else {
+                return null;
+            }
         },
 
         dragstart(e, elm) {
