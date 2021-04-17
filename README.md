@@ -1,3 +1,9 @@
+<a align="center" title="See live demo" href="https://codepen.io/vsync/pen/3f6b998fa1bb1b7c7f74ec89152f39f9/?editors=0100">
+
+![drag-sort demo](https://raw.githubusercontent.com/yairEO/dragsort/master/demo.gif)
+
+</a>
+
 <p align="center">
   <a href='https://www.npmjs.com/package/@yaireo/dragsort'>
       <img src="https://img.shields.io/npm/v/@yaireo/dragsort.svg" />
@@ -9,14 +15,8 @@
   <img src="https://img.shields.io/npm/dw/@yaireo/dragsort" />
 </p>
 
-[dragSort](https://codepen.io/vsync/pen/3f6b998fa1bb1b7c7f74ec89152f39f9/?editors=0100) - lightweight HTML5 drag-&-drop sorting
-========
+<h1 align="center"><a href="https://codepen.io/vsync/pen/3f6b998fa1bb1b7c7f74ec89152f39f9/?editors=0100">DragSort</a> <br><small>lightweight HTML5 drag-&-drop sorting</small></h1>
 
-<a align="center" href="https://codepen.io/vsync/pen/3f6b998fa1bb1b7c7f74ec89152f39f9/?editors=0100">
-
-![drag-sort demo](https://raw.githubusercontent.com/yairEO/dragsort/master/demo.gif)
-
-</a>
 
 ## Installation
 ```sh
@@ -33,21 +33,23 @@ npm i @yaireo/dragsort --save
 #### HTML
 ```html
 <ul class="list">
-    <li>A</li>
-    <li>BBBBB</li>
-    <li>CCCCCCCCC</li>
-    <li>DDDD DDDDDDDD</li>
-    <li>EE</li>
+    <li>drag & drop</li>
+    <li>items</li>
+    <li>easily</li>
+    <li>with this</li>
+    <li>super lightweight script</li>
 </ul>
 ```
 
 #### javascript
 ```js
-var listElm = document.querySelector('.list')
-var dragSort = new DragSort(listElm)
+import DragSort from '@yaireo/dragsort'
+
+const listElm = document.querySelector('.list')
+const dragSort = new DragSort(listElm)
 ```
 
-Useful *classes* are set on elements being dragged.
+> Note - useful *class* names are set on elements being dragged.
 
 ## Settings
 
