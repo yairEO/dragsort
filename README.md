@@ -44,6 +44,7 @@ npm i @yaireo/dragsort --save
 #### javascript
 ```js
 import DragSort from '@yaireo/dragsort'
+import '@yaireo/dragsort/dist/dragsort.css'
 
 const listElm = document.querySelector('.list')
 const dragSort = new DragSort(listElm)
