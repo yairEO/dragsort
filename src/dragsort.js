@@ -1,4 +1,14 @@
-var DragSort = (function (elm) {
+;(function(root, factory){
+    var define = define || {};
+    if( typeof define === 'function' && define.amd )
+        define([], factory);
+    else if( typeof exports === 'object' && typeof module === 'object' )
+        module.exports = factory();
+    else if(typeof exports === 'object')
+        exports["DragSort"] = factory()
+    else
+        root.DragSort = factory()
+}(this, function(){
     var _id = 0,
         _current = {}, // currently-dragged element
         _instances = {}
@@ -24,9 +34,7 @@ var DragSort = (function (elm) {
         }
     })()
 
-    /////////////////////////////////////
-
-    function _DragSort(elm, settings) {
+    function DragSort(elm, settings) {
         if (!elm) return this;
 
         settings = settings || {}
@@ -45,7 +53,7 @@ var DragSort = (function (elm) {
         this.bindEvents()
     }
 
-    _DragSort.prototype = {
+    DragSort.prototype = {
         namespace: 'dragsort',
 
         setup() {
@@ -294,11 +302,11 @@ var DragSort = (function (elm) {
     // Factory
     return function (elm, settings) {
         // if this "elm" has already been initialized with DragSort, return last DragSort instance and do not create a new one
-        _instances[++_id] = elm["_DragSort"]
-            ? _instances[elm["_DragSort"]]
-            : new _DragSort(elm, {...settings, uid: _id})
+        _instances[++_id] = elm["DragSort"]
+            ? _instances[elm["DragSort"]]
+            : new DragSort(elm, {...settings, uid: _id})
 
-        elm["_DragSort"] = _id
+        elm["DragSort"] = _id
         return _instances[_id]
     }
-})()
+}));
