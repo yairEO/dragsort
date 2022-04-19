@@ -115,6 +115,10 @@
             // https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/effectAllowed
             e.dataTransfer.effectAllowed = 'move'
 
+            if (typeof this.settings.callbacks.dragStart === 'function') {
+                this.settings.callbacks.dragStart(this.source.elm, e)
+            }
+
             // https://stackoverflow.com/q/19639969/104380
             setTimeout(this.afterDragStart.bind(this))
         },
@@ -215,7 +219,10 @@
             }
 
             this.source.elm && this.source.elm.classList.remove(`${this.namespace}--dragElem`, `${this.namespace}--hide`)
-            this.settings.callbacks.dragEnd(this.source.elm)
+            
+            if (typeof this.settings.callbacks.dragEnd === 'function') {
+                this.settings.callbacks.dragEnd(this.source.elm, e)
+            }
 
             return this
         },
