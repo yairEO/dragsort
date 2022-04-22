@@ -54,8 +54,9 @@ const dragSort = new DragSort(listElm)
 
 ## Settings
 
-Name                    | Type                         | Default                                    | Info
------------------------ | ---------------------------- | ------------------------------------------ | --------------------
-selector                | `String`                     | all child nodes of first parameter         | which elements should be draggable
-mode                    | `String`                     |                                            | Use `"vertical"` for vertical-lists re-ordering
-callbacks.dragEnd       | `Function`                   |                                            | callback function when finished dragging. The dropped element is the only argument
+Name                    | Type        | Default                                    | Info
+----------------------- | ----------- | ------------------------------------------ | --------------------
+selector                | `String`    | all child nodes of first parameter         | which elements should be draggable
+mode                    | `String`    |                                            | Use `"vertical"` for vertical-lists re-ordering
+callbacks.dragStart     | `Function`  |                                            | callback function when dragging started. Arguments are `(element, event)`
+callbacks.dragEnd       | `Function`  |                                            | callback function when dragging finished. Arguments are `(element, event)`

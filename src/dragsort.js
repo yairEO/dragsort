@@ -115,6 +115,8 @@
             // https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/effectAllowed
             e.dataTransfer.effectAllowed = 'move'
 
+            this.settings.callbacks.dragStart && this.settings.callbacks.dragStart(this.source.elm, e)
+
             // https://stackoverflow.com/q/19639969/104380
             setTimeout(this.afterDragStart.bind(this))
         },
@@ -197,12 +199,12 @@
         },
 
         dragend(e) {
-            clearTimeout(this.dragoverTimeout);
-            this.dragoverTimeout = null;
-            this.parentElm.classList.remove(`${this.namespace}--dragStart`);
+            clearTimeout(this.dragoverTimeout)
+            this.dragoverTimeout = null
+            this.parentElm.classList.remove(`${this.namespace}--dragStart`)
 
             if (!this.isValidElm(this.target.elm)) {
-                return this.cleanup();
+                return this.cleanup()
             }
 
             var insertBeforeElm = this.target.hoverDirection ? this.target.elm.nextElementSibling : this.target.elm;
