@@ -275,10 +275,14 @@
         },
 
         getItemsGap(elm) {
-            var styles = getComputedStyle(elm);
-            return this.settings.mode == 'vertical' ?
-                parseInt(styles.marginTop) + parseInt(styles.marginBottom) :
-                parseInt(styles.marginLeft) + parseInt(styles.marginRight)
+            var itemStyles = getComputedStyle(elm),
+                parentStyles = getComputedStyle(elm.parentNode),
+                v = this.settings.mode == 'vertical',
+                gap = parseInt(parentStyles.gap) || 0, // parent might be a flexbox witha a gap
+                marginGap = parseInt(itemStyles[`margin${v ? 'Top' : 'Left'}`]) +
+                            parseInt(itemStyles[`margin${v ? 'Bottom' : 'Right'}`])
+
+            return marginGap + gap;
         },
 
         bindEvents(unbind) {

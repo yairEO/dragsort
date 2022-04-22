@@ -52,15 +52,18 @@ section:nth-child(even) {
 }
 
 .list {
+  --gap: 1vw;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  padding: var(--gap);
+
   width: 100%;
   max-width: 600px;
   margin: 2rem auto;
-  padding: 0;
   list-style-type: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   overflow: hidden;
 }
 
@@ -93,10 +96,13 @@ section:nth-child(even) {
   font-weight: bold;
   border-radius: 20px;
   padding: 0.3em 0.5em;
-  margin: 5px 0 5px 5px;
   white-space: nowrap;
   box-sizing: border-box;
   overflow: hidden;
+}
+
+.card.dragsort--hide {
+  margin: 0 calc(var(--gap)/2 * -1);
 }
 </style>
 <script>
