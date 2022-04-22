@@ -215,7 +215,7 @@
             }
 
             this.source.elm && this.source.elm.classList.remove(`${this.namespace}--dragElem`, `${this.namespace}--hide`)
-            this.settings.callbacks.dragEnd(this.source.elm)
+            this.settings.callbacks.dragEnd && this.settings.callbacks.dragEnd(this.source.elm)
 
             return this
         },
